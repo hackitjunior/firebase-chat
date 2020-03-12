@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
 
@@ -33,6 +33,7 @@ import { ChatroomWindowComponent } from './pages/chat/components/chatroom-window
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
     BsDropdownModule.forRoot()

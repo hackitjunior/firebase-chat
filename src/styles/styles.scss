@@ -9,3 +9,18 @@ body {
 .container{
     height: calc(100vh - 80px);
 }
+
+.navbar {
+    height: 80px;
+}
+
+button {
+    width: 100%;
+
+    &.btn {
+        border-radius: 0;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
