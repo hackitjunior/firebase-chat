@@ -11,20 +11,20 @@ export class ChatroomWindowComponent implements OnInit {
   public dummyData = [
     {
       message: 'Mensaje 1',
-      createAt: new Date(),
+      createdAt: new Date(),
       sender: {
         firstName: 'Alberto',
         lastName: 'Silva',
-        photoUrl: 'http://via.placeholder.com/150x150'
+        photoUrl: 'http://via.placeholder.com/50x50'
       }
     },
     {
       message: 'Mensaje 2',
-      createAt: new Date(),
+      createdAt: new Date(),
       sender: {
         firstName: 'Alberto',
         lastName: 'Guzmán',
-        photoUrl: 'http://via.placeholder.com/150x150'
+        photoUrl: 'http://via.placeholder.com/50x50'
       }
     }
   ];
