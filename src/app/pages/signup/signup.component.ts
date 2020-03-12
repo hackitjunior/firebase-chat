@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Alert } from 'src/app/classes/alert';
+import { AlertType } from 'src/app/enums/alert-type.enum';
+import { AlertService } from 'src/app/services/alert.service';
 
 @Component({
   selector: 'app-signup',
@@ -9,7 +12,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class SignupComponent implements OnInit {
 
   public signupForm: FormGroup;
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private alertService: AlertService) {
     this.createForm();
   }
 
@@ -26,8 +29,13 @@ export class SignupComponent implements OnInit {
   }
 
   public submit(): void {
-    const {firstName, lastName, email, password} = this.signupForm.value;
-    console.log(`Email: ${email} Password: ${password} Name: ${firstName} Last Name: ${lastName}`);
+    if (this.signupForm.valid) {
+      const {firstName, lastName, email, password} = this.signupForm.value;
+      console.log(`Email: ${email} Password: ${password} Name: ${firstName} Last Name: ${lastName}`);
+    } else {
+      const failedSignedAlert = new Alert('Please enter a valid name, emai and passwod, try again', AlertType.Danger);
+      this.alertService.alerts.next(failedSignedAlert);
+    }
   }
 
 }
