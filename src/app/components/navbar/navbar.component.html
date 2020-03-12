@@ -1,8 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-primary bg-primary">
-    <div class="container">
-        <span class="navbar-brand">ChatApp</span>
+    <a class="navbar-brand" href="#">ChatApp</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="page-links">
-            <ul class="navbar-nav" *ngIf="true else loggedOut">
+            <ul class="navbar-nav mr-auto" *ngIf="true else loggedOut">
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/chat" routeLinkActive="active">Chat rooms</a>
                 </li>
@@ -15,7 +18,7 @@
 </nav>
 
 <ng-template #loggedOut>
-    <ul class="navbar-nav">
+    <ul class="navbar-nav mr-auto">
         <li class="nav-item">
             <a class="nav-link" routerLink="/login" routeLinkActive="active">Login</a>
         </li>
