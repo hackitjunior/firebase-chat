@@ -3,7 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
-import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
+import { AlertModule } from 'ngx-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,7 +36,7 @@ import { ChatroomWindowComponent } from './pages/chat/components/chatroom-window
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    BsDropdownModule.forRoot()
+    AlertModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
