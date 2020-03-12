@@ -5,12 +5,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="page-links">
-            <ul class="navbar-nav mr-auto" *ngIf="true else loggedOut">
+            <ul class="navbar-nav mr-auto" *ngIf="auth.currentUser else loggedOut">
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/chat" routeLinkActive="active">Chat rooms</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/login" routeLinkActive="active">Logout</a>
+                    <a class="nav-link" (click)="auth.logout()" routeLinkActive="active">Logout</a>
                 </li>
             </ul>
         </div>
